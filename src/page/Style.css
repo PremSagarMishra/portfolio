@@ -29,7 +29,7 @@
 }
 
 
-.home .contact{
+.home button{
     background-color: transparent;
     width: fit-content;
     padding: 10px 20px;
@@ -41,11 +41,55 @@
     cursor: pointer;
     transition: 0.2s;
 }
-.home .contact:hover{
-    color: var(--main-color);
+.home button:hover, .home button:focus{
+background-color: var(--main-color);
+}
+
+.heading{
+  color: var(--main-color);  
+  display: flex;
+  flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+gap: 20px;
+}
+
+.heading h1{
+    color:  var(--main-color);
+    font-size: 48px;
+}
+.heading div{
+    width: 150px;
+    height: 2px;
+    background-color: var(--main-color);
 }
 
 
-.intro:hover{
-    color: var(--main-color);
+.about .container{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about .container .left{
+    width: 50%;
+    font-size: 20px;
+}
+
+.about .container .right{
+    width: max-content;
+    border: 3px solid var(--main-color);
+    border-radius: 20px;
+    height: 80%;
+}
+
+.container .right img{
+    width: 340px;
+    height: 350px;
+    border-radius: 20px;
+    position: relative;
+    top: -20px;
+    left: -20px;
 }
