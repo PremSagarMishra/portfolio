@@ -1,0 +1,192 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+}
+
+.home p{
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+.home .intro{
+    color: var(--secondary-text-color);
+    font-size: 20px;
+    padding-right: 45%;
+}
+
+.home h1, .home h2{
+    font-size: 48px;
+}
+
+.home h1{
+    color: var(--text-color);
+}
+.home h2{
+    
+    color: var(--secondary-text-color);
+}
+
+
+.home button{
+    background-color: transparent;
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.home .contact-me:hover{
+background-color: var(--main-color);
+}
+
+.heading{
+  color: var(--main-color);  
+  display: flex;
+  flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+gap: 20px;
+}
+
+.heading h1{
+    color:  var(--main-color);
+    font-size: 48px;
+}
+.heading div{
+    width: 150px;
+    height: 2px;
+    background-color: var(--secondary-text-color);
+}
+
+
+.about .container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about .container .left{
+    width: 50%;
+    font-size: 20px;
+}
+
+.about .container .right{
+    width: max-content;
+    border: 3px solid var(--main-color);
+    border-radius: 20px;
+    height: 80%;
+}
+
+.container .right img{
+    width: 340px;
+    height: 350px;
+    border-radius: 20px;
+    position: relative;
+    top: -20px;
+    left: -20px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .sub-head{
+font-size: 24px;
+padding-right: 10%;
+}
+
+.service-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+}
+
+.skills{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.contact{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.contact .left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+}
+.contact .left input,textarea{
+    background-color: transparent;
+    border: 1px solid black;
+    color: var(--text-color);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.contact .left input[type="button"]{
+    background-color: transparent;
+    border: 1px solid black;
+    color: var(--main-color);
+    font-size: 20px;
+    padding: 10px;
+    width: max-content;
+    align-self: center;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact .left input[type="button"]:hover , .contact .left input[type="button"]:focus{
+background-color: var(--main-color);
+color: var(--text-color);
+}
+
+.contact .right{
+    width: 40%;
+    display: flex;
+    flex-direction: column ;
+    gap: 20px;
+    align-items: flex-end;
+}
+.contact .right div{
+    display: flex;
+    justify-content: flex-start;
+    width: 150px;
+    
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease-in-out;
+}
+.contact .right div:hover .icon,.contact .right div:hover p{
+    color: var(--main-color);
+    fill: var(--main-color);
+}
+
+.contact .right div .icon{
+    font-size: 40px;
+}
+
+.contact .right div p{
+    font-size: 24px;
+}
