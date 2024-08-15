@@ -2,7 +2,10 @@ import React from 'react'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div> <div className="heading">
+    <h1>Projects</h1>
+    <div></div>
+  </div></div>
   )
 }
 
