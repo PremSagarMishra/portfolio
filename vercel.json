@@ -1,28 +1,5 @@
 {
-    "routes":[
-        {
-            "src":"/",
-            "dest":"/"
-        },
-        {
-            "src":"/about",
-            "dest":"/"
-        },
-        {
-            "src":"/services",
-            "dest":"/"
-        },
-        {
-            "src":"/skills",
-            "dest":"/"
-        },
-        {
-            "src":"/projects",
-            "dest":"/"
-        },
-        {
-            "src":"/contact",
-            "dest":"/"
-        }
+    "rewrites":[
+        {"sources":"/(.*)","destination":"/"}
     ]
 }
