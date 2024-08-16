@@ -6,23 +6,23 @@
         },
         {
             "src":"/about",
-            "dest":"/about"
+            "dest":"/"
         },
         {
             "src":"/services",
-            "dest":"/services"
+            "dest":"/"
         },
         {
             "src":"/skills",
-            "dest":"/skills"
+            "dest":"/"
         },
         {
             "src":"/projects",
-            "dest":"/projects"
+            "dest":"/"
         },
         {
             "src":"/contact",
-            "dest":"/contact"
+            "dest":"/"
         }
     ]
 }
