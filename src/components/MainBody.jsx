@@ -12,7 +12,7 @@ const MainBody = () => {
 
     <Router>
     <div className='body'>
-        <div style={{position:"relative",top:"0%",left:"0%"}}>
+        <div style={{position:"relative",top:"0%",left:"0%",zIndex:"-1"}}>
         <div style={{height:"21px",background:"var(--main-color)",width:"260px"}}></div>
         <div style={{height:"260px",background:"var(--main-color)",width:"21px"}}></div>
         </div>
@@ -28,7 +28,7 @@ const MainBody = () => {
            </Routes>
         </div>
 
-        <div style={{position:"relative",rotate:"180deg"}}>
+        <div style={{position:"relative",rotate:"180deg",zIndex:"-1"}}>
         <div style={{height:"21px",background:"var(--main-color)",width:"260px"}}></div>
         <div style={{height:"260px",background:"var(--main-color)",width:"21px"}}></div>
         </div>

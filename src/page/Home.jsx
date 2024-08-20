@@ -11,7 +11,7 @@ const Home = () => {
         enjoy turning product ideas into tech products and strive to stay
         updated with the latest technology in web and app development.
       </p>
-      <button className="contact-me" onMouseOver={console.log("Mouse over")}>Contact Me</button>
+      <button className="contact-me">Contact Me</button>
     </div>
   );
 };

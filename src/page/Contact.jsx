@@ -22,7 +22,7 @@ const Contact = () => {
           <input type="text" placeholder="Name"/>
           <input type="text" placeholder="Email" />
           <textarea placeholder="Message" rows="5"></textarea>
-          <input type="button" value="Send Message" />
+          <input type="button"  value="Send Message" />
         </div>
         <div className="right">
         <div><FaGithub className="icon"/>
