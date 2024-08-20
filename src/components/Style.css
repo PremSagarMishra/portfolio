@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 15%;
-    box-shadow:  0 0 1px grey;
+    box-shadow:  0 0 2px grey;
 }
 .navbar .left a{
     font-size: 24px;
@@ -113,5 +113,93 @@
 .skill:hover, .skill:focus{
  transform: scale(1.03,1.03);
  box-shadow: 0 0 2px var(--main-color);
+ cursor: pointer;
 }
 
+
+.projectcard{
+    height: 300px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.projectcard .image{
+    width: 100%;
+    height: 40%;
+    object-fit: fill;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.projectcard .sub-head{
+    width: 100%;
+    padding: 0;
+    font-size: 20px;
+    font-variant: normal;
+    padding: 0px 5px;
+
+}
+
+.projectcard .content{
+    color: var(--secondary-text-color);
+    height: 60px;
+    padding: 0px 5px;
+    word-spacing: 3px;
+    text-align: flex-start;
+    
+}
+
+.contact-me{
+    background-color: transparent;
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.contact-me:hover,.contact-me:focus{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+    .navbar{
+        padding: 10px;
+    }
+
+    .body{
+        margin: 3% 10px;
+    }
+
+    .body2{
+        padding: 4%;
+    }
+
+
+}
+
+
+@media only screen and (max-width:768px){
+    .navbar{
+        padding: 5px;
+    }
+
+    .navbar .right{
+        display: none;
+    }
+
+    .body{
+        margin: 10% 10px;
+    }
+
+    .body2{
+        padding: 7%;
+    }
+}
