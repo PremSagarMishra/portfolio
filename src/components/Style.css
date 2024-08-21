@@ -33,20 +33,20 @@
 }
 
 
-.body{
+.body {
     margin: 30px 15%;
     height: 80vh;
-    box-shadow: 0 0 1px grey;
+    
+    border: 1px solid grey;
     position: relative;
 }
 
-.body2{
+.body2 {
     width: 100%;
-    position: absolute;
-    height: 100%;
+    height: 100%; /* Ensure it fills the height of .body */
     padding: 6%;
-    top: 0;
-    left: 0;
+    position: relative; /* Position it inside .body */
+    z-index: 1; /* Ensure it's above the background decorations */
 }
 
 
@@ -58,6 +58,7 @@
     gap: 15px;
     border: 2px solid var(--main-color);
     width: 372px;
+    flex-wrap: wrap;
     height: 240px;
     padding: 30px;
     border-radius: 20px;
@@ -119,7 +120,7 @@
 
 .projectcard{
     height: 300px;
-    width: 280px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,7 +138,9 @@
 }
 .projectcard .sub-head{
     width: 100%;
+    overflow: hidden;
     padding: 0;
+    height: 25px;
     font-size: 20px;
     font-variant: normal;
     padding: 0px 5px;
@@ -148,6 +151,7 @@
     color: var(--secondary-text-color);
     height: 60px;
     padding: 0px 5px;
+    overflow: hidden;
     word-spacing: 3px;
     text-align: flex-start;
     
@@ -177,12 +181,18 @@
 
     .body{
         margin: 3% 10px;
+        height: 50vh;
     }
 
-    .body2{
-        padding: 4%;
-    }
+    
 
+    .service-card{
+        width: 300px;
+    }
+    
+    .projectcard .sub-head{
+        font-size: 18px;
+    }
 
 }
 
@@ -197,10 +207,31 @@
     }
 
     .body{
-        margin: 10% 10px;
+        margin: 2% 10px;
+        height: 90vh;
     }
 
     .body2{
         padding: 7%;
+    }
+
+    .service-card{
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+    }
+
+    .projectcard{
+        width: 100%;
+    }
+    .skill{
+       width: 45%; 
+    }
+    .skill .icon{
+        font-size: 14px;
+    }
+
+    .skill p{
+        font-size: 14px;
     }
 }
