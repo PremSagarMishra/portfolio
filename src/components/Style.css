@@ -37,16 +37,30 @@
     margin: 30px 15%;
     height: 80vh;
     
-    border: 1px solid grey;
     position: relative;
 }
 
 .body2 {
+
     width: 100%;
     height: 100%; /* Ensure it fills the height of .body */
     padding: 6%;
     position: relative; /* Position it inside .body */
     z-index: 1; /* Ensure it's above the background decorations */
+}
+
+.body .div1{
+    height: 21px;
+    background: var(--main-color);
+    width: 260px;
+    border-top-right-radius: 100px;
+}
+
+.body .div2{
+    height: 260px;
+     background: var(--main-color);
+      width:21px;
+      border-bottom-left-radius: 100px;
 }
 
 
@@ -119,22 +133,26 @@
 
 
 .projectcard{
-    height: 300px;
+    height: 250px;
     width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
     border: 2px solid var(--main-color);
-    border-radius: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
+.projectcard:hover{
+    box-shadow: 0 0 3px var(--main-color);
 
+}
 .projectcard .image{
     width: 100%;
     height: 40%;
     object-fit: fill;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .projectcard .sub-head{
     width: 100%;
@@ -156,7 +174,18 @@
     text-align: flex-start;
     
 }
-
+.projectcard .contact-me{
+    background-color: transparent;
+    width: fit-content;
+    padding: 5px 10px;
+    border: none;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
 .contact-me{
     background-color: transparent;
     width: fit-content;
@@ -174,6 +203,50 @@
     color: var(--text-color);
     border: 1px solid white;
 }
+
+.b1{
+    animation: bendAndMove 1s ease forwards;
+}
+
+.b2{
+    animation: bendAndMove 2s ease forwards;
+}
+
+.reveal-mask {
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    animation: revealFromLeft 3s ease forwards; /* Animate the width */
+  }
+  @keyframes revealFromLeft {
+    0% {
+      clip-path: inset(0 100% 0 0); /* Start with content hidden from the right */
+    }
+    100% {
+      clip-path: inset(0 0 0 0); /* Slight buffer on the right to prevent clipping */
+    }
+  }
+  
+  
+@keyframes bendAndMove {
+    0% {
+      transform: translateX(-80%) rotate(-90deg); /* Start at the left corner, slightly bent */
+    }
+    100% {
+      transform: translateX(0) rotate(0deg); /* Move to original place, straight */
+    }
+  }
+  @keyframes appearFromLeft {
+    0% {
+      transform: translateX(-100%); /* Start from off-screen to the left */
+      opacity: 0; /* Fully transparent */
+    }
+    100% {
+      transform: translateX(0); /* End at its original position */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
     .navbar{
         padding: 10px;
@@ -198,6 +271,19 @@
 
 
 @media only screen and (max-width:768px){
+
+    .body .div1{
+        height: 10px;
+        background: var(--main-color);
+        width: 200px;
+    }
+    
+    .body .div2{
+        height: 200px;
+         background: var(--main-color);
+          width:10px;
+    }
+    
     .navbar{
         padding: 5px;
     }
@@ -213,6 +299,7 @@
 
     .body2{
         padding: 7%;
+        
     }
 
     .service-card{
