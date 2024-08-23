@@ -1,16 +1,19 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 15%;
-    box-shadow:  0 0 2px grey;
+    box-shadow: 0 0 2px grey;
+    position: relative;
 }
-.navbar .left a{
+
+.navbar .left a {
     font-size: 24px;
     color: var(--text-color);
     text-decoration: none;
 }
-.navbar .right{
+
+.navbar .right {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,32 +21,47 @@
     gap: 25px;
 }
 
-.right li{
+.right ul {
+    display: flex;
+    gap: 25px;
     list-style-type: none;
+    padding: 0;
 }
 
-.right li a{
+.right li a {
     text-decoration: none;
     color: var(--secondary-text-color);
 }
 
-.right li a:hover{
+.right li a:hover {
     color: var(--text-color);
     transition: 0.3s;
 }
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
 
 .body {
     margin: 30px 15%;
     height: 80vh;
-    
+    overflow: scroll;
+    max-height: 600px;
+    overflow: scroll;
     position: relative;
 }
 
-.body2 {
+.body::-webkit-scrollbar{
+    display: none;
+}
 
+.body2 {
+    
     width: 100%;
     height: 100%; /* Ensure it fills the height of .body */
+    
     padding: 6%;
     position: relative; /* Position it inside .body */
     z-index: 1; /* Ensure it's above the background decorations */
@@ -284,17 +302,51 @@
           width:10px;
     }
     
-    .navbar{
-        padding: 5px;
+    .navbar {
+        padding: 20px;
     }
 
-    .navbar .right{
-        display: none;
+    .menu-icon {
+        display: block;
     }
 
+    .navbar .right {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--background-color);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 60px;
+        transition: 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .navbar .right.open {
+        right: 0;
+    }
+
+    .navbar .right ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar .right li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .navbar .right li a {
+        font-size: 18px;
+    }
     .body{
         margin: 2% 10px;
         height: 90vh;
+        max-height: 100%;
     }
 
     .body2{

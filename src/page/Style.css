@@ -71,17 +71,16 @@ gap: 20px;
 .about{
     animation: revealFromLeft 2s ease forwards;
 }
-.about .container{
+.about .container {
     width: 100%;
     display: flex;
     flex-direction: row;
     height: 400px;
     justify-content: space-between;
     align-items: flex-start;
-    
 }
 
-.about .container .left{
+.about .container .left {
     width: 50%;
     font-size: 20px;
     display: flex;
@@ -89,11 +88,12 @@ gap: 20px;
     overflow: scroll;
 }
 
-.left .intro{
+.left .intro {
     height: 60vh;
-    overflow: scroll;
     font-size: 18px;
+    overflow: scroll;
 }
+
 
 .intro::-webkit-scrollbar{
     display: none;
@@ -297,21 +297,33 @@ border: 1px solid white;
     }
 
 
-    .about .container{
+    .about .container {
+        display: flex;
         flex-direction: column-reverse;
         gap: 20px;
-        
+        height: auto;
     }
 
-    .about .container .left{
+    .about .container .left {
         width: 100%;
-        display: flex;
         padding: 10px;
-        justify-content: center;
+        height: 40%;
+        display: flex;
+        align-items: stretch;
     }
+
+    .left .intro {
+        padding: 10px;
+        height: 90%;
+        text-align: start;
+        overflow: scroll;
+    }
+
+
 
     .about .container .right{
         width: 100%;
+        height: 40%;
         justify-content: center;
         align-items: center;
         
