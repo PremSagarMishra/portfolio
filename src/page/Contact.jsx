@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaFile } from "react-icons/fa";
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const result = await emailjs.send(
+        'service_4awdvn8', // Replace with your EmailJS service ID
+        'template_cfvr043', // Replace with your EmailJS template ID
+        formData,
+        'inpi8-fzeLIevSAwF' // Replace with your EmailJS user ID
+      );
+
+      console.log(result.text);
+      alert('Message sent successfully!');
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to send message. Please try again.');
+    }
+  };
 
   const handleClick = (url) => {
-    window.location.href = url;  // Navigate to the specified URL
+    window.location.href = url;
   };
 
   return (
@@ -18,12 +48,33 @@ const Contact = () => {
       </p>
 
       <div className="contact">
-        <div className="left">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message" rows="5"></textarea>
-          <input type="button" value="Send Message" />
-        </div>
+        <form className="left" onSubmit={handleSubmit}>
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="Name" 
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Email" 
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea 
+            name="message" 
+            placeholder="Message" 
+            rows="5"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <input type="submit" className="send-message" value="Send Message" />
+        </form>
         <div className="right">
           <div onClick={() => handleClick('https://github.com/PremSagarMishra')}>
             <FaGithub className="icon" />
