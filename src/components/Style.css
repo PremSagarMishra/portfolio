@@ -61,12 +61,15 @@
     
     width: 100%;
     height: 100%; /* Ensure it fills the height of .body */
-    
+    overflow: scroll;
     padding: 6%;
     position: relative; /* Position it inside .body */
     z-index: 1; /* Ensure it's above the background decorations */
 }
 
+.body2::-webkit-scrollbar{
+    display: none;
+}
 .body .div1{
     height: 21px;
     background: var(--main-color);
