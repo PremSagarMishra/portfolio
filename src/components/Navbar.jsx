@@ -1,16 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import "./Style.css"
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   }
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    // Add event listener when the component mounts
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    // Remove event listener on cleanup
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [navRef]);
+
   return (
-    <div className='navbar'>
+    <div className='navbar' ref={navRef}>
       <div className="left">
         <a href="./">Portfolio</a>
       </div>

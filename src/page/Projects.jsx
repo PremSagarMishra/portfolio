@@ -32,6 +32,7 @@ const Projects = () => {
             heading={project.heading}
             content={project.content}
             techstack={project.techstack}
+            github={project.github}
           />
         ))}
       </div>

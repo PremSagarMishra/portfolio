@@ -1,3 +1,4 @@
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -190,10 +191,14 @@
     color: var(--secondary-text-color);
     height: 60px;
     padding: 0px 5px;
-    overflow: hidden;
+    overflow: scroll;
     word-spacing: 3px;
     text-align: flex-start;
     
+}
+
+.projectcard .content::-webkit-scrollbar{
+    display: none;
 }
 .projectcard .contact-me{
     background-color: transparent;
@@ -311,6 +316,7 @@
 
     .menu-icon {
         display: block;
+        z-index: 2;
     }
 
     .navbar .right {
