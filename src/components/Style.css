@@ -303,7 +303,7 @@
     }
     
     .navbar {
-        padding: 20px;
+        padding: 10px;
     }
 
     .menu-icon {
@@ -344,13 +344,14 @@
         font-size: 18px;
     }
     .body{
-        margin: 2% 10px;
+        margin: 3% 10px;
+        
         height: 80vh;
         max-height: 100%;
     }
 
     .body2{
-        padding: 7%;
+        padding: 10%;
         
     }
 
